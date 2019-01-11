@@ -49,7 +49,6 @@ class BenchConversation extends Conversation
         $questionTemplate->addButton(Button::create('Нет')->value('Нет'));
 
         $this->ask($questionTemplate, function (BotManAnswer $answer){
-            $this->say($answer->getText());
             if($answer->getText() == 'Да'){
                 $this->say('Отлично! Приступим.');
                 $this->checkForNextQuestion();
